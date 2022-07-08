@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Forces | Learn Better</title>
+  
+  
+  <style>
+
+	#learn_better {
+		height: 80px;
+		width: 200px;
+	}
+	
+	ul {
+		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+ 		overflow: hidden;
+ 		background-color: #F5F5F5;
+ 		/*position: -webkit-sticky;*/ /* Safari */
+  		/*position: sticky;*/
+  		top: 0;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: inline-block;
+		color: #757575;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: Verdana;
+	}
+	
+	.dropbtn {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: Verdana;
+	}
+
+	li a:hover:not(.dropbtn) {
+		background-color: #dbdbdb;
+	}
+	
+	li.dropdown {
+		display: inline-block;
+	}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #F5F5F5;
+		z-index: 1;
+	}
+	
+	.dropdown-content a {
+ 		color: #757575;
+  		padding: 14px 16px;
+  		text-decoration: none;
+  		min-width: 160px;
+ 		display: block;
+ 		text-align: left;
+	}
+
+	#current {
+		background-color: #5997d7;
+		color: white;
+	}
+	
+	.dropdown-content a:hover {
+		background-color: #dbdbdb;
+	}
+	
+  	.dropdown:hover .dropdown-content {
+  		display: block;
+  	}
+  	
+  	h1 {
+  		font-family: Verdana;
+  	}
+  	
+  	p {
+  		font-family: Verdana;
+  	}
+  	
+  	
+  </style>
+
+</head>
+
+<body>
+
+<img src="learn_better_logo_middle.png" alt="Learn Better Logo Middle" id="learn_better">
+
+<ul>
+	<li id="home_nav"><a href="index.html">Home</a></li>
+	<li id="current" class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Physics</a>
+		<div class="dropdown-content">
+			<a href="kinematics-solver.html">Kinematics Calculator</a>
+			<a href="forces.html">Forces</a>
+		</div>
+	</li>
+	<li id="about_nav"><a href="about.html">About</a></li>
+</ul>
+
+<h1>Forces</h1>
+
+<p>Forces Calc or whatever I put here</p>
+</body>
+</html>

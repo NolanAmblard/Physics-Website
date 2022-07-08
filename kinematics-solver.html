@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Kinematics Calculator | Learn Better</title>
+  
+  <script type="text/javascript" src="kinematicSolver.js"></script>
+  
+  <style>
+
+	#learn_better {
+		height: 80px;
+		width: 200px;
+	}
+	
+	#first_kinematic {
+		height: 36px;
+		width: 120px;
+	}
+	
+	#second_kinematic {
+		height: 42px;
+		width: 140px;
+	}
+	
+	#third_kinematic {
+		height: 42px;
+		width: 140px;
+	}
+	
+	ul {
+		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+ 		overflow: hidden;
+ 		background-color: #F5F5F5;
+ 		/*position: -webkit-sticky;*/ /* Safari */
+  		/*position: sticky;*/
+  		top: 0;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: inline-block;
+		color: #757575;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: Verdana;
+	}
+	
+	.dropbtn {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: Verdana;
+	}
+
+	li a:hover:not(.dropbtn) {
+		background-color: #dbdbdb;
+	}
+	
+	li.dropdown {
+		display: inline-block;
+	}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #F5F5F5;
+		z-index: 1;
+	}
+	
+	.dropdown-content a {
+ 		color: #757575;
+  		padding: 14px 16px;
+  		text-decoration: none;
+  		min-width: 160px;
+ 		display: block;
+ 		text-align: left;
+	}
+
+	#current {
+		background-color: #5997d7;
+		color: white;
+	}
+	
+	.dropdown-content a:hover {
+		background-color: #dbdbdb;
+	}
+	
+  	.dropdown:hover .dropdown-content {
+  		display: block;
+  	}
+	
+  	table {
+  		border: none;
+  	}
+  	
+  	h1 {
+  		font-family: Verdana;
+  	}
+  	
+  	p {
+  		font-family: Verdana;
+  	}
+  	
+  	td {
+  		text-align: left;
+  		padding: 8px;
+  		font-family: Verdana;
+  	}
+  	
+  	button {
+  		width: 100px;
+  		padding: 12px 14px;
+  		border: none;
+  		background-color: #5997d7;
+  		color: white;
+  		font-family: Verdana;
+  		font-size: 16px;
+  	}
+  	
+  	button:active {
+  		background-color: #4879ab;
+  		cursor: pointer;
+  	}
+  	
+  	button:hover {
+  		background-color: #528bc4;
+  		cursor: pointer;
+  	}
+  	
+  	input[type=text] {
+  		width: 150px;
+  		padding: 6px 6px;
+  		box-sizing: border-box;
+  		border: none;
+  		border-bottom: 2px solid #5997d7;
+  		background-color: #F5F5F5;
+  		font-family: Verdana;
+  	}
+  	
+  	input[type=text]:hover {
+  		width: 150px;
+  		padding: 6px 6px;
+  		box-sizing: border-box;
+  		border: none;
+  		border-bottom: 2px solid #5997d7;
+  		background-color: #EDEDED;
+  		font-family: Verdana;
+  	}
+  	
+  	input[type=text]:focus {
+  		width: 150px;
+  		padding: 6px 6px;
+  		box-sizing: border-box;
+  		border: none;
+  		border-bottom: 2px solid #5997d7;
+  		background-color: #DCDCDC;
+  		font-family: Verdana;
+  	}
+  	
+  </style>
+
+</head>
+
+<body>
+
+<img src="learn_better_logo_middle.png" alt="Learn Better Logo Middle" id="learn_better">
+
+<ul>
+	<li id="home_nav"><a href="index.html">Home</a></li>
+	<li id="current" class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Physics</a>
+		<div class="dropdown-content">
+			<a href="kinematics-solver.html">Kinematics Calculator</a>
+			<a href="forces.html">Forces</a>
+		</div>
+	</li>
+	<li id="about_nav"><a href="about.html">About</a></li>
+</ul>
+
+<h1>Uniform Acceleration Kinematics Calculator</h1>
+<p id="three_kinematics">All answers to kinematics problems are derived from variations of three equations: </p> <img src="first_kinematic.png" alt="First Kinematic Equation" id="first_kinematic"> <img src="second_kinematic.png" alt="Second Kinematic Equation" id="second_kinematic"> <img src="third_kinematic.png" alt="Third Kinematic Equation" id="third_kinematic">
+<p>Using these equations, we are able to find unknown values of variables given we are provided the value of at least three variables.</p>
+<p id="describe_format">Put 'x' or 'X' for unknown values. If velocity stays constant, put both velocities as the same value and acceleration as 0.</p>
+
+
+	<table>
+		<tbody><tr>
+			<td><label for="displace">Displacement</label></td>
+			<td><input type="text" id="displace" name="displace"></td>
+			<td id="disp"></td>
+		</tr>
+		<tr>
+			<td><label for="ivel">Initial Velocity</label></td>
+			<td><input type="text" id="ivel" name="ivel"></td>
+			<td id="vel0p"></td>
+		</tr>
+		<tr>
+			<td><label for="fvel">Final Velocity</label></td>
+			<td><input type="text" id="fvel" name="fvel"></td>
+			<td id="velfp"></td>
+		</tr>
+		<tr>
+			<td><label for="accel">Acceleration</label></td>
+			<td><input type="text" id="accel" name="accel"></td>
+			<td id="accelp"></td>
+		</tr>
+		<tr>
+			<td><label for="time">Time</label></td>
+			<td><input type="text" id="time" name="time"></td>
+			<td id="timep"></td>
+		</tr>
+	</tbody></table>
+
+
+<br></br>
+
+<button id="button" onclick="kinematics()">Submit</button>
+
+<p id="explanation"></p>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>About | Learn Better</title>
+  
+  
+  <style>
+
+	#learn_better {
+		height: 80px;
+		width: 200px;
+	}
+	
+	ul {
+		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+ 		overflow: hidden;
+ 		background-color: #F5F5F5;
+ 		/*position: -webkit-sticky;*/ /* Safari */
+  		/*position: sticky;*/
+  		top: 0;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a, .dropbtn {
+		display: inline-block;
+		color: #757575;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: Verdana;
+	}
+
+	li a:hover:not(.current), .dropdown:hover .dropbtn {
+		background-color: #dbdbdb;
+	}
+	
+	li.dropdown {
+		display: inline-block;
+	}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #F5F5F5;
+		z-index: 1;
+	}
+	
+	.dropdown-content a {
+ 		color: #757575;
+  		padding: 14px 16px;
+  		text-decoration: none;
+  		min-width: 160px;
+ 		display: block;
+ 		text-align: left;
+	}
+
+	.current {
+		background-color: #5997d7;
+		color: white;
+	}
+	
+	.dropdown-content a:hover {
+		background-color: #dbdbdb;
+	}
+	
+  	.dropdown:hover .dropdown-content {
+  		display: block;
+  	}
+  	
+  	h1 {
+  		font-family: Verdana;
+  	}
+  	
+  	p {
+  		font-family: Verdana;
+  	}
+  	
+  	
+  </style>
+
+</head>
+
+<body>
+
+<img src="learn_better_logo_middle.png" alt="Learn Better Logo Middle" id="learn_better">
+
+<ul>
+	<li id="home_nav"><a href="index.html">Home</a></li>
+	<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Physics</a>
+		<div class="dropdown-content">
+			<a href="kinematics-solver.html">Kinematics Calculator</a>
+			<a href="forces.html">Forces</a>
+		</div>
+	</li>
+	<li id="about_nav"><a class="current" href="#about">About</a></li>
+</ul>
+
+<h1>About</h1>
+
+<p>At Learn Better, we strive to help students and motivated individuals broden their knowledge and understanding about whatever they please. We don't want people to only know <span style="color:#5997d7;">how</span> to do something. We want them to know <span style="color:#5997d7;">why</span> something works.</p>
+</body>
+</html>
