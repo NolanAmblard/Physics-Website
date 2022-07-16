@@ -1,14 +1,14 @@
 function solveKinematics() {
 			
-var x = document.getElementById("displace").value.toString().toLowerCase();
-var v0 = document.getElementById("ivel").value.toString().toLowerCase();
-var v = document.getElementById("fvel").value.toString().toLowerCase();
-var a = document.getElementById("accel").value.toString().toLowerCase();
-var t = document.getElementById("time").value.toString().toLowerCase();
+    var x = document.getElementById("displace").value.toString().toLowerCase();
+    var v0 = document.getElementById("ivel").value.toString().toLowerCase();
+    var v = document.getElementById("fvel").value.toString().toLowerCase();
+    var a = document.getElementById("accel").value.toString().toLowerCase();
+    var t = document.getElementById("time").value.toString().toLowerCase();
 
-console.log("Inside of solveKinematics()");
+    console.log("Inside of solveKinematics()");
 
-   if( x=="x" && v0!="x" && v!="x" && a!="x" && t!="x") {
+    if( x=="x" && v0!="x" && v!="x" && a!="x" && t!="x") {
 	//Solve for only displacement
 	console.log("Inside of solve only for displacement if statement");
 	var dis = 0.0;
